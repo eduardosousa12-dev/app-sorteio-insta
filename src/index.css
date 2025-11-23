@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+@import "tailwindcss";
+
+/* Paleta Premium */
+:root {
+  --gold: #C89B3C;
+  --gold-light: #E6C87C;
+  --gold-dark: #A67C00;
+  --bg-dark: #0F0F0F;
+  --bg-card: #1A1A1A;
+  --text-primary: #F2F2F2;
+  --text-muted: #777777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-dark);
+  background-image: radial-gradient(ellipse at top center, #1a1a1a 0%, #0F0F0F 60%);
+  color: var(--text-primary);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Premium */
+.card-premium {
+  background: var(--bg-card);
+  border: 1px solid rgba(200, 155, 60, 0.25);
+  border-radius: 16px;
+}
+
+/* Botão Premium */
+.btn-premium {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #000;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(200, 155, 60, 0.35);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(200, 155, 60, 0.5);
+}
+
+.btn-premium:active {
+  transform: translateY(0);
+}
+
+.btn-premium:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Cores */
+.text-gold {
+  color: var(--gold);
+}
+
+.text-gold-light {
+  color: var(--gold-light);
+}
+
+.bg-card {
+  background: var(--bg-card);
+}
+
+/* Linha separadora */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+}
+
+/* Spinner */
+.spinner {
+  border: 3px solid rgba(200, 155, 60, 0.2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Animações */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.4s ease-out forwards;
+}
+
+@keyframes pulse-btn {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(200, 155, 60, 0.35);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(200, 155, 60, 0.5);
+  }
+}
+
+.pulse-btn {
+  animation: pulse-btn 2.5s ease-in-out infinite;
+}
