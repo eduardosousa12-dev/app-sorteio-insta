@@ -5,7 +5,14 @@
       "Bash(npm run build:*)",
       "Bash(npm run dev:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Sistema de sorteio ao vivo LL MODAS\n\n- Interface premium mobile-first\n- Integração com webhook para buscar comentários\n- Validação automática (3+ menções)\n- Animação de sorteio estilo slot machine\n- Confete dourado ao revelar vencedor\n- Opção de refazer sorteio\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
